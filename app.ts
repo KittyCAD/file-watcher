@@ -19,7 +19,6 @@ const cadFile = './tester.step';
                 src_format: 'step',
                 body: await fsp.readFile(cadFile, 'base64'),
             })
-            if ('error_code' in response) throw response
             console.log(JSON.stringify(response, null, 2))
         } else {
             console.log('filename not provided');
